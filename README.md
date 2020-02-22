@@ -1,6 +1,3 @@
-# KSTTM
-Codes for Kernelized Support Tensor Train Machines
-
 Kernelized Support Tensor Train Machines (KSTTM) [1] for Matlab&copy;/Octave&copy;
 --------------------------------------------------------------------------------------------------
 
