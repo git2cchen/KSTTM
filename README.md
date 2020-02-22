@@ -3,12 +3,14 @@ Kernelized Support Tensor Train Machines (KSTTM) [1] for Matlab&copy;/Octave&cop
 
 This package contains Matlab/Octave code for the methods mentioned in Kernelized Support Tensor Train Machines, namely K-STTM-Prod and K-STTM-Sum.
 
+
 1. Requirements
 ------------
 
 * Matlab or Octave.
 
 * CVX toolbox [3].
+
 
 2. Functions
 ------------
