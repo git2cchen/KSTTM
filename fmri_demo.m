@@ -9,8 +9,8 @@ sigma2 = 0.1; % should be less than 1 in this case, the larger, the less
 % model parameters 
 class_num=2; % class number
 weight=1; % weight on the first and second modes of the tensor data,
-% which determince the importance of those two modes compared with the
-% third tensor modes, no need to change the value if no obvious clue.
+% which determines the importance of those two modes compared with the
+% third tensor mode, no need to change the value if no obvious clue.
 flag='p';% 'a' for K-STTM-Sum, 'p' for K-STTM-Prod
 
 % fMRI data preparation
@@ -74,7 +74,7 @@ for c1=1:class_num-1
             sigma=sigmarange(sigma_i);
             tic
             [ K] = kernel_mat( X, N,d,sigma,weight,flag);
-            fprintf('kernel matrix costs time')
+            fprintf('kernel matrix costs time is   ')
             toc
             for C_i = 1:size(Crange,2)
                 sigma=sigmarange(sigma_i);
@@ -84,6 +84,7 @@ for c1=1:class_num-1
                 tic
                 Ypred = predict(validdata, alpha, b, X, Y, sigma,d,weight,flag);
                 fprintf('validation costs time is:   ')
+                toc
                 Ypred(Ypred>0)=1;
                 Ypred(Ypred<0)=-1;
                 truelabel=[-ones(validnum,1);ones(validnum,1)];
