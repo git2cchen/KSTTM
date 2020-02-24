@@ -64,7 +64,7 @@ for s = 1:size(XX{d},3)
             Ktemp_1=weight*exp(Ktemp./(-2*sigma^2));
             
             % linear kernel, replace line 50-64 with the following codes if a linear kernel is
-            % selected to be applied on this mode
+            % selected to be applied on this mode. Modify this in kernel_mat.m also
             %Ktemp=zeros(size(x{i},1)*size(x{i},3),N*size(X{i},1)*size(X{i},3));
             % % first compute the -2*xi*xj matrix
             %Xtemp=reshape(permute(x{i},[1 3 2]),[size(x{i},1)*size(x{i},3),size(x{i},2)]);
@@ -73,7 +73,7 @@ for s = 1:size(XX{d},3)
             %Ktemp_1=Ktemp+repmat(temp,1,N);
 			
 			%polynomial kernel, replace line 50-64 with the following codes if a polynomial kernel is
-            % selected to be applied on this mode
+            % selected to be applied on this mode. Modify this in kernel_mat.m also
             %polyorder=2;
             %b_p=0;
 			%Ktemp=zeros(size(x{i},1)*size(x{i},3),N*size(X{i},1)*size(X{i},3));
@@ -151,7 +151,7 @@ for s = 1:size(XX{d},3)
             Ktemp_1=weight*exp(Ktemp./(-2*sigma^2));
             
             % linear kernel, replace line 135-149 with the following codes if a linear kernel is
-            % selected to be applied on this mode
+            % selected to be applied on this mode.  Modify this in kernel_mat.m also
 			%Ktemp=zeros(size(x{i},1)*size(x{i},3),N*size(X{i},1)*size(X{i},3));
             % %first compute the -2*xi*xj matrix
             %Xtemp=reshape(permute(x{i},[1 3 2]),[size(x{i},1)*size(x{i},3),size(x{i},2)]);
@@ -160,13 +160,15 @@ for s = 1:size(XX{d},3)
             %Ktemp_1=Ktemp+repmat(temp,1,N);
 			
 			% polynomial kernel, replace line 135-149 with the following codes if a polynomial kernel is
-            % selected to be applied on this mode
+            % selected to be applied on this mode. Modify this in kernel_mat.m also
+            %polyorder=2;
+            %b_p=0;
 			%Ktemp=zeros(size(x{i},1)*size(x{i},3),N*size(X{i},1)*size(X{i},3));
             % % first compute the -2*xi*xj matrix
             %Xtemp=reshape(permute(x{i},[1 3 2]),[size(x{i},1)*size(x{i},3),size(x{i},2)]);
             %Xtemp1=reshape(permute(X{i},[1 3 2]),[size(X{i},1)*size(X{i},3),size(X{i},2)]);
             %temp=Xtemp*Xtemp1';
-			%temp=(temp+jieju).^polyorder;
+			%temp=(temp+b_p).^polyorder;
             %Ktemp_1=Ktemp+repmat(temp,1,N);
             
             % i=2
