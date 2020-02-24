@@ -61,7 +61,6 @@ if flag=='a'
             % linear kernel, replace line 46-59 with the following codes if a linear kernel is
             % selected to be applied on this mode.  Modify this in predict.m also
 			%Ktemp=zeros(size(x{i},1)*size(x{i},3),N*size(X{i},1)*size(X{i},3));
-            % %first compute the -2*xi*xj matrix
             %Xtemp=reshape(permute(x{i},[1 3 2]),[size(x{i},1)*size(x{i},3),size(x{i},2)]);
             %Xtemp1=reshape(permute(X{i},[1 3 2]),[size(X{i},1)*size(X{i},3),size(X{i},2)]);
             %temp=Xtemp*Xtemp1';
@@ -72,7 +71,6 @@ if flag=='a'
             %polyorder=2;
             %b_p=0;
 			%Ktemp=zeros(size(x{i},1)*size(x{i},3),N*size(X{i},1)*size(X{i},3));
-            %% first compute the -2*xi*xj matrix
             %Xtemp=reshape(permute(x{i},[1 3 2]),[size(x{i},1)*size(x{i},3),size(x{i},2)]);
             %Xtemp1=reshape(permute(X{i},[1 3 2]),[size(X{i},1)*size(X{i},3),size(X{i},2)]);
             %temp=Xtemp*Xtemp1';
@@ -158,7 +156,6 @@ if flag=='p'
             % linear kernel, replace line 140-154 with the following codes if a linear kernel is
             % selected to be applied on this mode. Modify this in predict.m also
 			%Ktemp=zeros(size(x{i},1)*size(x{i},3),N*size(X{i},1)*size(X{i},3));
-            % %first compute the -2*xi*xj matrix
             %Xtemp=reshape(permute(x{i},[1 3 2]),[size(x{i},1)*size(x{i},3),size(x{i},2)]);
             %Xtemp1=reshape(permute(X{i},[1 3 2]),[size(X{i},1)*size(X{i},3),size(X{i},2)]);
             %temp=Xtemp*Xtemp1';
@@ -169,7 +166,6 @@ if flag=='p'
             %polyorder=2;
             %b_p=0;
 			%Ktemp=zeros(size(x{i},1)*size(x{i},3),N*size(X{i},1)*size(X{i},3));
-            % % first compute the -2*xi*xj matrix
             %Xtemp=reshape(permute(x{i},[1 3 2]),[size(x{i},1)*size(x{i},3),size(x{i},2)]);
             %Xtemp1=reshape(permute(X{i},[1 3 2]),[size(X{i},1)*size(X{i},3),size(X{i},2)]);
             %temp=Xtemp*Xtemp1';
